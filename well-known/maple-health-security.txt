@@ -1,0 +1,7 @@
+# Our security address
+Contact: mailto:security@getmaple.ca
+
+# Our security policy
+Policy: https://www.getmaple.ca/security/
+
+Expires: 2023-06-01T03:59:00.000Z

@@ -1,0 +1,24 @@
+generated: '2026-07-24'
+method: searched
+source: live probe of https://www.getmaple.ca/.well-known/*
+host: https://www.getmaple.ca
+documents:
+- path: /.well-known/security.txt          # RFC 9116
+  status: 200
+  file: maple-health-security.txt
+- path: /.well-known/openid-configuration   # OIDC discovery
+  status: 404
+- path: /.well-known/oauth-authorization-server  # RFC 8414
+  status: 404
+- path: /.well-known/oauth-protected-resource     # RFC 9728
+  status: 404
+- path: /.well-known/smart-configuration          # SMART-on-FHIR
+  status: 404
+- path: /.well-known/api-catalog                   # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+note: >-
+  Only an RFC 9116 security.txt is served (and its Expires date has lapsed). No OIDC/OAuth
+  discovery, SMART-on-FHIR, API catalog, or AI-plugin manifest is published — consistent with
+  Maple exposing no public programmatic API surface.

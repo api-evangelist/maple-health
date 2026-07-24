@@ -1,0 +1,30 @@
+# Maple
+
+> Maple (getmaple.ca) is a Canadian virtual-care company headquartered in Toronto that connects patients across every Canadian province to Canadian-licensed doctors and nurse practitioners for on-demand and scheduled telehealth. It sells a consumer membership and B2B care programs to employers, insurers, and health systems. As of this profile Maple publishes NO public developer portal, REST API, or HL7 FHIR endpoint; partner interoperability is handled through bespoke, gated program design. Its security program is SOC 2 Type II and ISO 27001 aligned with a responsible-disclosure channel at security@getmaple.ca.
+
+## About
+
+- [Website](https://www.getmaple.ca/): Canadian virtual-care membership and services.
+- [For Business](https://www.getmaple.ca/business/): B2B care programs for employers, insurers, and health systems.
+- [Pricing](https://www.getmaple.ca/pricing/): Consumer membership and per-visit pricing.
+- [Blog](https://www.getmaple.ca/blog/): Company and health-topic articles.
+- [Patient App](https://app.getmaple.ca/login): Consumer login for iOS, Android, and web apps.
+
+## Security & Trust
+
+- [Security](https://www.getmaple.ca/security/): SOC 2 Type II, ISO 27001, NIST SP 800 alignment; AES-256 at rest, TLS 1.2+ in transit; biannual penetration testing.
+- [Trust Center](https://trust.getmaple.ca/): Published compliance posture and certifications.
+- [security.txt](https://www.getmaple.ca/.well-known/security.txt): Responsible-disclosure contact security@getmaple.ca.
+- [Terms of Service](https://www.getmaple.ca/terms/)
+- [Privacy Policy](https://www.getmaple.ca/privacy/)
+
+## Developer / API posture
+
+- No public REST API, OpenAPI/Swagger, or HL7 FHIR CapabilityStatement is published (all developer/API subdomains and paths probed resolve to nothing or 404).
+- No SMART-on-FHIR `.well-known/smart-configuration` or OIDC/OAuth discovery is served.
+- A "Maple Integration API" at developers.maple.com belongs to a DIFFERENT company (a US healthcare workforce / shift-staffing platform) and is not attributed here.
+- [GitHub](https://github.com/getmaple): Two public repositories (React Native keychain and a Twilio Video app), no published client SDKs.
+
+## Notes
+
+- generated: 2026-07-24 by the API Evangelist enrichment pipeline from apis.yml and verified public pages (no provider-published llms.txt exists at /llms.txt — 404).

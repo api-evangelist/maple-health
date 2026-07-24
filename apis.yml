@@ -31,12 +31,30 @@ modified: '2026-07-24'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: TrustCenter
+  url: security/maple-health-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/maple-health-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/maple-health-domain-security.yml
+- type: Compliance
+  url: https://www.getmaple.ca/security/
+- type: WellKnown
+  url: well-known/maple-health-well-known.yml
+- type: SecurityTxt
+  url: well-known/maple-health-security.txt
+- type: LLMsTxt
+  url: llms/maple-health-llms.txt
 - type: Website
   url: https://www.getmaple.ca/
 - type: Blog
   url: https://www.getmaple.ca/blog/
 - type: Pricing
   url: https://www.getmaple.ca/pricing/
+- type: Login
+  url: https://app.getmaple.ca/login
+- type: GitHubOrganization
+  url: https://github.com/getmaple
 - type: Support
   url: https://www.getmaple.ca/contact/
 - type: Security
