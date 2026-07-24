@@ -1,0 +1,50 @@
+aid: maple-health
+url: https://raw.githubusercontent.com/api-evangelist/maple-health/refs/heads/main/apis.yml
+name: Maple
+kind: company
+description: >-
+  Maple is a Canadian virtual-care company (getmaple.ca) headquartered in Toronto that
+  connects patients across every Canadian province to Canadian-licensed doctors and nurse
+  practitioners for on-demand and scheduled telehealth. Its consumer membership and B2B
+  programs cover same-day acute care, paediatrics, mental health therapy and psychiatry,
+  specialist consultations, chronic-condition management, prescriptions with pickup or
+  delivery, lab requisitions, and medical notes, delivered through iOS, Android, and web
+  apps. Maple sells to individuals and to employers, insurers, and health systems (clients
+  include Air Canada, Blue Cross, Rogers, and Green Shield) via custom care programs rather
+  than a self-serve technical platform. As of this review Maple publishes NO public developer
+  portal, REST API, or HL7 FHIR endpoint; there is no documented CapabilityStatement or
+  SMART-on-FHIR configuration. Its interoperability posture is enterprise/partner-gated, and
+  its security program is SOC 2 Type II and ISO 27001 aligned with a responsible-disclosure
+  channel at security@getmaple.ca.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Canada
+- Telehealth
+- Virtual Care
+- Digital Health
+- Mental Health
+- e-Prescribing
+- Remote Care
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.getmaple.ca/
+- type: Blog
+  url: https://www.getmaple.ca/blog/
+- type: Pricing
+  url: https://www.getmaple.ca/pricing/
+- type: Support
+  url: https://www.getmaple.ca/contact/
+- type: Security
+  url: https://www.getmaple.ca/security/
+- type: TermsOfService
+  url: https://www.getmaple.ca/terms/
+- type: PrivacyPolicy
+  url: https://www.getmaple.ca/privacy/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

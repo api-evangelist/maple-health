@@ -1,0 +1,166 @@
+aid: maple-health
+name: Maple
+review:
+  question: Does Maple (getmaple.ca) expose a public developer portal, REST API, or HL7 FHIR interoperability surface?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Maple is a Canadian virtual-care (telehealth) company operating at getmaple.ca. It
+    delivers on-demand and scheduled care from Canadian-licensed doctors and nurse
+    practitioners across all provinces via consumer memberships and B2B employer/insurer
+    programs. As of this review Maple publishes NO public developer portal, NO documented
+    REST API, and NO HL7 FHIR endpoint. Every developer/API host probed either failed to
+    resolve or returned 404. A "Maple Integration API" does exist at developers.maple.com /
+    api.maple.com, but that is a DIFFERENT company (a US healthcare workforce / shift-staffing
+    platform) and was deliberately NOT attributed to this Canadian telehealth Maple. Maple's
+    interoperability with partners (employers, insurers, health systems) is handled through
+    custom program design, not a self-serve technical API. This is an identity-only stub:
+    real company, gated/no public API.
+  homeMarket: Canada
+  developerPortal:
+    found: false
+    confirmedUrl: ''
+    probes:
+    - url: https://developer.getmaple.ca/
+      status: '000'
+      note: DNS/host does not resolve.
+    - url: https://docs.getmaple.ca/
+      status: '000'
+      note: DNS/host does not resolve.
+    - url: https://api.getmaple.ca/
+      status: '000'
+      note: DNS/host does not resolve.
+    - url: https://fhir.getmaple.ca/
+      status: '000'
+      note: DNS/host does not resolve.
+    - url: https://www.getmaple.ca/developers
+      status: '404'
+      note: Not found.
+    - url: https://www.getmaple.ca/api
+      status: '404'
+      note: Not found.
+    - url: https://www.getmaple.ca/interoperability
+      status: '404'
+      note: Not found.
+  fhirCapabilityStatement:
+    found: false
+    version: null
+    resources: []
+    probes:
+    - url: https://api.getmaple.ca/metadata
+      status: '000'
+      note: Host does not resolve; no FHIR CapabilityStatement served.
+    - url: https://www.getmaple.ca/.well-known/smart-configuration
+      status: '404'
+      note: No SMART-on-FHIR configuration served.
+    - url: https://api.getmaple.ca/.well-known/smart-configuration
+      status: '000'
+      note: Host does not resolve.
+    - url: https://www.getmaple.ca/.well-known/openid-configuration
+      status: '404'
+      note: No OpenID configuration served on the marketing host.
+  downloadableSpecs:
+    found: false
+    count: 0
+    provenance: |
+      No OpenAPI/Swagger or FHIR CapabilityStatement is published by Maple. No /openapi.json,
+      /swagger.json, /api-docs, or /spec surface exists on any resolving Maple host. Nothing
+      was harvested; the openapi/ directory contains no specs.
+  authModel:
+    scheme: none-public
+    smartOnFhir: false
+    scopes: []
+    note: |
+      Maple exposes no public API and therefore no documented developer authentication scheme
+      (no SMART-on-FHIR, no OAuth2 client-credentials, no API key, no mTLS). Patient access is
+      via the consumer iOS/Android/web apps behind a private account login; partner integrations
+      are bespoke and gated.
+  standardsConformance:
+    usCore: false
+    ukCore: false
+    auCore: false
+    caCore: unknown
+    daVinci: false
+    carin: false
+    note: |
+      No FHIR conformance is documented. Canada's pan-Canadian FHIR profiles (CA Core /
+      CA Baseline, stewarded by Canada Health Infoway) are the relevant national baseline for
+      Canadian health-data exchange, but Maple publishes no evidence of CA Core conformance or
+      any FHIR implementation guide.
+  securityAndCompliance:
+    soc2TypeII: true
+    iso27001: true
+    encryption: AES-256 at rest, TLS 1.2+ in transit
+    responsibleDisclosure: security@getmaple.ca
+    note: |
+      Security page states alignment with AICPA Trust Service Criteria, ISO 27001:2013, and
+      NIST SP 800 series; SOC 2 Type II report available on request; biannual penetration
+      testing and weekly vulnerability scans; responsible-disclosure with possible bounty for
+      pre-approved critical reports. HIPAA/PIPEDA/PHIPA certifications are not explicitly claimed.
+  accessPosture: gated
+  selfServe: false
+transports:
+- protocol: HTTPS
+  scheme: https
+  baseURL: https://www.getmaple.ca/
+  documented: true
+  note: Marketing/consumer web presence only; no documented programmatic API surface.
+- protocol: REST
+  scheme: https
+  documented: false
+  note: No public REST API is documented for getmaple.ca.
+- protocol: FHIR
+  scheme: https
+  documented: false
+  note: No HL7 FHIR base URL, CapabilityStatement, or SMART-on-FHIR configuration is served.
+confirmedPages:
+- url: https://www.getmaple.ca/
+  status: '200'
+  type: Website
+- url: https://www.getmaple.ca/pricing/
+  status: '200'
+  type: Pricing
+- url: https://www.getmaple.ca/blog/
+  status: '200'
+  type: Blog
+- url: https://www.getmaple.ca/business/
+  status: '200'
+  type: Business
+- url: https://www.getmaple.ca/careers/
+  status: '200'
+  type: Careers
+- url: https://www.getmaple.ca/contact/
+  status: '200'
+  type: Support
+- url: https://www.getmaple.ca/security/
+  status: '200'
+  type: Security
+- url: https://www.getmaple.ca/terms/
+  status: '200'
+  type: TermsOfService
+- url: https://www.getmaple.ca/privacy/
+  status: '200'
+  type: PrivacyPolicy
+- url: https://www.getmaple.ca/accessibility/
+  status: '200'
+  type: Accessibility
+sources:
+- url: https://www.getmaple.ca/
+  type: Website
+  note: Canadian virtual-care membership; no developer/API links in nav or footer.
+- url: https://www.getmaple.ca/business/
+  type: Business
+  note: B2B care programs for employers/insurers/health systems; custom program design, no API/EMR integration documented.
+- url: https://www.getmaple.ca/security/
+  type: Security
+  note: SOC 2 Type II, ISO 27001, responsible disclosure to security@getmaple.ca.
+- url: https://developers.maple.com/docs/maple
+  type: Documentation
+  note: DIFFERENT company (healthcare workforce/shift-staffing at api.maple.com); explicitly NOT attributed to getmaple.ca.
+actions:
+  reason: |
+    Identity-only bootstrap. Real Canadian telehealth company captured with verified public
+    company pages and honest security posture, but no public API/FHIR surface exists to harvest.
+    Classified as built-stub. No specs saved because none are published.
