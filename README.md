@@ -1,4 +1,4 @@
-# Maple (maple-health)
+# Maple
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,47 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Maple (getmaple.ca) is a Canadian virtual-care company headquartered in Toronto that connects patients across every Canadian province to Canadian-licensed doctors and nurse practitioners for on-demand and scheduled telehealth. Through its iOS, Android, and web apps it delivers same-day acute care, paediatrics, mental health therapy and psychiatry, specialist consultations, chronic-condition management, prescriptions with pickup or delivery, lab requisitions, and medical notes.
+Maple is a Canadian virtual-care company (getmaple.ca) headquartered in Toronto that connects patients across every Canadian province to Canadian-licensed doctors and nurse practitioners for on-demand and scheduled telehealth. Its consumer membership and B2B programs cover same-day acute care, paediatrics, mental health therapy and psychiatry, specialist consultations, chronic-condition management, prescriptions with pickup or delivery, lab requisitions, and medical notes, delivered through iOS, Android, and web apps. Maple sells to individuals and to employers, insurers, and health systems (clients include Air Canada, Blue Cross, Rogers, and Green Shield) via custom care programs rather than a self-serve technical platform. As of this review Maple publishes NO public developer portal, REST API, or HL7 FHIR endpoint; there is no documented CapabilityStatement or SMART-on-FHIR configuration. Its interoperability posture is enterprise/partner-gated, and its security program is SOC 2 Type II and ISO 27001 aligned with a responsible-disclosure channel at security@getmaple.ca.
 
-Maple sells both a consumer membership and B2B care programs to employers, insurers, and health systems (clients include Air Canada, Blue Cross, Rogers, and Green Shield), delivered as custom programs rather than a self-serve technical platform.
+**Areas:** Healthcare · Canada · Telehealth · Virtual Care · Digital Health · Mental Health · e-Prescribing · Remote Care
 
-**Home market:** Canada
+## Maple on APIs.io
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/maple-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/maple-health/refs/heads/main/apis.yml)
+Everything profiled for Maple is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/maple-health/](https://apis.io/providers/maple-health/)** — or go straight to one of the APIs or properties below.
 
-## API / FHIR posture
+### Published properties
 
-As of this review (2026-07-24), Maple publishes **no public developer portal, no documented REST API, and no HL7 FHIR endpoint**. Developer/API hosts (developer., docs., api., fhir.getmaple.ca and /developers, /api, /interoperability paths) either do not resolve or return 404, and no FHIR CapabilityStatement (`/metadata`) or SMART-on-FHIR `/.well-known/smart-configuration` is served. Partner interoperability is handled through bespoke, gated program design. Note: a "Maple Integration API" at developers.maple.com belongs to a **different** company (a healthcare workforce / shift-staffing platform) and is deliberately not attributed here.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-This profile is an identity-only stub awaiting the enrichment pipeline.
+#### Security (3)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Healthcare
-- Canada
-- Telehealth
-- Virtual Care
-- Digital Health
-- Mental Health
-- e-Prescribing
-- Remote Care
+- [Maple Health Domain Security](https://apis.io/security/maple-health/maple-health-domain-security/)
+- [Maple Health Trust Center](https://apis.io/security/maple-health/maple-health-trust-center/)
+- [Maple Health Vulnerability Disclosure](https://apis.io/security/maple-health/maple-health-vulnerability-disclosure/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.getmaple.ca/)
-- [Blog](https://www.getmaple.ca/blog/)
 - [Pricing](https://www.getmaple.ca/pricing/)
 - [Support](https://www.getmaple.ca/contact/)
+- [Blog](https://www.getmaple.ca/blog/)
 - [Security](https://www.getmaple.ca/security/)
-- [Terms of Service](https://www.getmaple.ca/terms/)
-- [Privacy Policy](https://www.getmaple.ca/privacy/)
+- [Compliance](https://www.getmaple.ca/security/)
+- [Terms of service](https://www.getmaple.ca/terms/)
+- [Privacy policy](https://www.getmaple.ca/privacy/)
+- [GitHub](https://github.com/getmaple)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 20.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 53.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.5** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/maple-health/](https://apis.io/providers/maple-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Maple: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/maple-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
